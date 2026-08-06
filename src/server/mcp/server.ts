@@ -30,6 +30,7 @@ import {
   runSiteAuditTool,
 } from "@/server/mcp/tools/site-audit-tools";
 import { whoamiTool } from "@/server/mcp/tools/whoami";
+import { reverseEngineerCompetitorTool } from "@/server/mcp/tools/reverse-engineer-competitor";
 
 // Each handler is wrapped with instrumentMcpToolHandler so failures reach
 // PostHog — the MCP route has no error middleware of its own. Tools are
@@ -251,6 +252,15 @@ export function registerOpenSeoMcpTools(server: McpServer) {
       getAuditPagesTool.name,
       getAuditPagesTool.config.outputSchema,
       getAuditPagesTool.handler,
+    ),
+  );
+  server.registerTool(
+    reverseEngineerCompetitorTool.name,
+    reverseEngineerCompetitorTool.config,
+    instrumentMcpToolHandler(
+      reverseEngineerCompetitorTool.name,
+      reverseEngineerCompetitorTool.config.outputSchema,
+      reverseEngineerCompetitorTool.handler,
     ),
   );
 }
