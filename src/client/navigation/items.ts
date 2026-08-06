@@ -98,27 +98,19 @@ export function getProjectNavGroups(projectId: string) {
   const byPath = (path: (typeof projectNavItems)[number]["to"]) =>
     all.find((i) => i.to === path)!;
 
+  // Free-path fork (TheGoodSite): only the features that work without DataForSEO
+  // are shown. Keyword Research, Domain Overview, Backlinks, Rank Tracking, Brand
+  // Lookup and Prompt Explorer are DataForSEO/paid and are hidden. Site Audit (the
+  // crawler) and GSC Insights (Google Search Console) are free.
   return [
     {
       label: "Overview",
       items: [byPath("/p/$projectId")],
     },
     {
-      label: "Research",
-      items: [
-        byPath("/p/$projectId/keywords"),
-        byPath("/p/$projectId/domain"),
-        byPath("/p/$projectId/backlinks"),
-        byPath("/p/$projectId/brand-lookup"),
-        byPath("/p/$projectId/prompt-explorer"),
-      ],
-    },
-    {
       label: "My Site",
       items: [
         byPath("/p/$projectId/search-performance"),
-        byPath("/p/$projectId/rank-tracking"),
-        byPath("/p/$projectId/saved"),
         byPath("/p/$projectId/audit"),
       ],
     },
