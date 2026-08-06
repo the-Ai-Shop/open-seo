@@ -17,15 +17,15 @@ import { registerOpenSeoMcpTools } from "@/server/mcp/server";
 function createOpenSeoMcpServer() {
   const server = new McpServer(
     {
-      name: "OpenSEO MCP",
-      title: "OpenSEO",
+      name: "TheGoodSite SEO MCP",
+      title: "TheGoodSite SEO",
       version: "0.0.11",
       description:
         "SEO research tools for AI agents: keyword research and metrics, SERP and local SERP results, domain and backlink analysis, rank tracking, and Google Search Console performance.",
-      websiteUrl: "https://openseo.so",
+      websiteUrl: "https://thegoodsite.co",
       icons: [
         {
-          src: "https://openseo.so/android-chrome-512x512.png",
+          src: "https://thegoodsite.co/android-chrome-512x512.png",
           mimeType: "image/png",
           sizes: ["512x512"],
         },
@@ -33,7 +33,7 @@ function createOpenSeoMcpServer() {
     },
     {
       instructions:
-        "OpenSEO research tools use credits. Proceed with normal focused research, but ask the user for confirmation before planned batches over 2,000 credits.",
+        "TheGoodSite SEO research tools use credits. Proceed with normal focused research, but ask the user for confirmation before planned batches over 2,000 credits.",
     },
   );
   registerOpenSeoMcpTools(server);

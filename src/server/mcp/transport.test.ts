@@ -225,12 +225,12 @@ describe("handleSelfHostedOpenSeoMcpRequest", () => {
 
     const serverInfo = client.getServerVersion();
     expect(serverInfo).toMatchObject({
-      name: "OpenSEO MCP",
-      title: "OpenSEO",
-      websiteUrl: "https://openseo.so",
+      name: "TheGoodSite SEO MCP",
+      title: "TheGoodSite SEO",
+      websiteUrl: "https://thegoodsite.co",
       icons: [
         {
-          src: "https://openseo.so/android-chrome-512x512.png",
+          src: "https://thegoodsite.co/android-chrome-512x512.png",
           mimeType: "image/png",
           sizes: ["512x512"],
         },

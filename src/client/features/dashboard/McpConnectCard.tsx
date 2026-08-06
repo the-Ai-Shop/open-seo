@@ -8,8 +8,8 @@ import { dismissDashboardMcpCard } from "@/serverFunctions/dashboard";
 function firstPrompts(domain: string | null): string[] {
   const site = domain ?? "my site";
   return [
-    `Review ${site}. Ideas for what keywords we could target? Use OpenSEO`,
-    "Research my competitors top pages and keywords and tell me what's working. Use OpenSEO",
+    `Review ${site}. Ideas for what keywords we could target? Use TheGoodSite SEO`,
+    "Research my competitors top pages and keywords and tell me what's working. Use TheGoodSite SEO",
   ];
 }
 
@@ -93,14 +93,14 @@ export function McpConnectCard({
             </ul>
             <p className="text-xs text-base-content/50">
               Waiting for your first call — this card disappears once your agent
-              talks to OpenSEO.
+              talks to TheGoodSite SEO.
             </p>
           </>
         ) : (
           <>
             <div className="space-y-2 text-sm text-base-content/70">
               <p>
-                OpenSEO is designed to give your AI agent the data it needs to
+                TheGoodSite SEO is designed to give your AI agent the data it needs to
                 build a great SEO strategy and help you execute it.
               </p>
               <p>

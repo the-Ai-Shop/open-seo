@@ -126,7 +126,7 @@ export function Sidebar({ projectId, onNavigate, onClose }: SidebarProps) {
           onClick={onNavigate}
           className="text-base font-semibold text-base-content"
         >
-          OpenSEO
+          TheGoodSite SEO
         </Link>
         {onClose ? (
           <button

@@ -11,7 +11,7 @@ import {
 } from "@/client/features/ai-mcp/SetupControls";
 
 const DISCORD_URL = "https://discord.gg/c9uGs3cFXr";
-const SUPPORT_EMAIL = "ben@openseo.so";
+const SUPPORT_EMAIL = "ben@thegoodsite.co";
 const SAM_GITHUB_URL = "https://github.com/every-app/sam";
 const SKILL_NAMES = [
   "seo-project-setup",
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/_app/ai")({
 function AiPage() {
   const mcpUrl =
     typeof window === "undefined"
-      ? "https://app.openseo.so/mcp"
+      ? "https://app.thegoodsite.co/mcp"
       : `${window.location.origin}/mcp`;
 
   return (
@@ -51,7 +51,7 @@ function AiPage() {
       <div className="mx-auto max-w-3xl">
         <h1 className="text-2xl font-semibold">AI & MCP</h1>
         <p className="mt-2 text-sm text-base-content/70 leading-relaxed">
-          Connect your AI agent to OpenSEO. Run keyword research, SERP analysis,
+          Connect your AI agent to TheGoodSite SEO. Run keyword research, SERP analysis,
           domain lookups, and backlink reviews from your editor or chat.
         </p>
 
@@ -62,7 +62,7 @@ function AiPage() {
               This instance is behind Cloudflare Access. MCP clients cannot
               connect until Managed OAuth is enabled on your Access application.{" "}
               <a
-                href="https://openseo.so/docs/self-hosting/cloudflare#connect-the-mcp-server-through-cloudflare-access"
+                href="https://thegoodsite.co/docs/self-hosting/cloudflare#connect-the-mcp-server-through-cloudflare-access"
                 target="_blank"
                 rel="noreferrer"
                 className="link font-medium"
@@ -90,9 +90,9 @@ function AiPage() {
             </code>
           </div>
           <p className="mt-2.5 text-xs text-base-content/55 leading-relaxed">
-            Paste this into any MCP client. This URL points at the OpenSEO
+            Paste this into any MCP client. This URL points at the TheGoodSite SEO
             instance you are using now, whether hosted, self-hosted, or local.
-            Sign in with OpenSEO when prompted.
+            Sign in with TheGoodSite SEO when prompted.
           </p>
         </section>
 
@@ -143,9 +143,9 @@ function AiPage() {
                   .
                 </li>
                 <li>Paste the MCP URL above and click Add.</li>
-                <li>Approve the OpenSEO login when prompted.</li>
+                <li>Approve the TheGoodSite SEO login when prompted.</li>
                 <li>
-                  Optional: after OpenSEO connects, click{" "}
+                  Optional: after TheGoodSite SEO connects, click{" "}
                   <span className="font-medium text-base-content">
                     Configure
                   </span>
@@ -205,17 +205,17 @@ function AiPage() {
                   .
                 </li>
                 <li>Paste the MCP URL above.</li>
-                <li>Approve the OpenSEO login when prompted.</li>
+                <li>Approve the TheGoodSite SEO login when prompted.</li>
               </ol>
             </Collapsible>
           </div>
         </section>
 
         <section className="mt-12">
-          <h2 className="text-base font-semibold">OpenSEO Skills</h2>
+          <h2 className="text-base font-semibold">TheGoodSite SEO Skills</h2>
           <p className="mt-1.5 text-sm text-base-content/70 leading-relaxed">
             Skills give Codex and Claude Code reusable SEO workflows that can
-            call your OpenSEO MCP tools when live SERP, keyword, backlink, or
+            call your TheGoodSite SEO MCP tools when live SERP, keyword, backlink, or
             domain data is needed.
           </p>
           <div className="mt-4 divide-y divide-base-300 overflow-hidden rounded-lg border border-base-300 bg-base-200">
@@ -226,7 +226,7 @@ function AiPage() {
             >
               <CodeBlock code={SKILLS_INSTALL} />
               <p className="text-sm text-base-content/70">
-                You can also auto-accept each OpenSEO skill:
+                You can also auto-accept each TheGoodSite SEO skill:
               </p>
               <CodeBlock code={ALL_SKILLS_INSTALL} />
             </Collapsible>
@@ -309,7 +309,7 @@ function AiPage() {
               {
                 title: "In-app SEO Research Agent",
                 description:
-                  "Ask questions and run research without leaving OpenSEO",
+                  "Ask questions and run research without leaving TheGoodSite SEO",
               },
               {
                 title: "Content Assistant",

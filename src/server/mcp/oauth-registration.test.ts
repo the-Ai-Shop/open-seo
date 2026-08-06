@@ -4,7 +4,7 @@ import { normalizeClientRegistrationRequest } from "@/server/mcp/oauth-registrat
 describe("normalizeClientRegistrationRequest", () => {
   it("converts public dynamic registration requests to confidential clients", async () => {
     const request = new Request(
-      "https://app.openseo.so/api/auth/oauth2/register",
+      "https://app.thegoodsite.co/api/auth/oauth2/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -25,7 +25,7 @@ describe("normalizeClientRegistrationRequest", () => {
 
   it("defaults omitted token auth methods to confidential clients", async () => {
     const request = new Request(
-      "https://app.openseo.so/api/auth/oauth2/register",
+      "https://app.thegoodsite.co/api/auth/oauth2/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -45,7 +45,7 @@ describe("normalizeClientRegistrationRequest", () => {
 
   it("keeps explicit confidential registration methods", async () => {
     const request = new Request(
-      "https://app.openseo.so/api/auth/oauth2/register",
+      "https://app.thegoodsite.co/api/auth/oauth2/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -70,7 +70,7 @@ describe("normalizeClientRegistrationRequest", () => {
       token_endpoint_auth_method: "none",
     });
     const request = new Request(
-      "https://app.openseo.so/api/auth/oauth2/register",
+      "https://app.thegoodsite.co/api/auth/oauth2/register",
       {
         method: "POST",
         headers: {

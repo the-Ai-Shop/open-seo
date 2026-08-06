@@ -13,10 +13,10 @@ describe("mcpResponse", () => {
 
     const withMeta = mcpResponse({
       text: "hi",
-      meta: { url: "https://app.openseo.so/p/1", projectId: "1" },
+      meta: { url: "https://app.thegoodsite.co/p/1", projectId: "1" },
     });
     expect(withMeta._meta).toEqual({
-      url: "https://app.openseo.so/p/1",
+      url: "https://app.thegoodsite.co/p/1",
       projectId: "1",
     });
   });
@@ -25,13 +25,13 @@ describe("mcpResponse", () => {
     const result = mcpResponse({
       text: "hi",
       meta: {
-        url: "https://app.openseo.so",
+        url: "https://app.thegoodsite.co",
         organizationId: undefined,
         creditsCharged: 0,
       },
     });
     expect(result._meta).toEqual({
-      url: "https://app.openseo.so",
+      url: "https://app.thegoodsite.co",
       creditsCharged: 0,
     });
     expect(result._meta).not.toHaveProperty("organizationId");
@@ -49,7 +49,7 @@ describe("mcpResponse", () => {
     const result = mcpResponse({
       text: "hi",
       meta: {
-        url: "https://app.openseo.so/p/1",
+        url: "https://app.thegoodsite.co/p/1",
         projectId: "1",
         creditsRemaining: 100,
       },
@@ -59,13 +59,13 @@ describe("mcpResponse", () => {
     expect(result.structuredContent).toEqual({
       foo: "bar",
       meta: {
-        url: "https://app.openseo.so/p/1",
+        url: "https://app.thegoodsite.co/p/1",
         projectId: "1",
         creditsRemaining: 100,
       },
     });
     expect(result._meta).toEqual({
-      url: "https://app.openseo.so/p/1",
+      url: "https://app.thegoodsite.co/p/1",
       projectId: "1",
       creditsRemaining: 100,
     });
@@ -74,11 +74,11 @@ describe("mcpResponse", () => {
   it("uses metadata as structuredContent when no data payload is provided", () => {
     const result = mcpResponse({
       text: "hi",
-      meta: { url: "https://app.openseo.so" },
+      meta: { url: "https://app.thegoodsite.co" },
     });
 
     expect(result.structuredContent).toEqual({
-      meta: { url: "https://app.openseo.so" },
+      meta: { url: "https://app.thegoodsite.co" },
     });
   });
 });
